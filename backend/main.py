@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 import models, schemas, services
 from database import SessionLocal, engine
 
-app = fastapi.FastAPI()
+app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
 
 
@@ -18,7 +18,7 @@ models.Base.metadata.create_all(bind=engine)
 async def create_user(
     user: schemas.UserCreate, db: Session = Depends(services.get_db)
 ):
-    db_user = await services.get_user_by_email(user.username, db)
+    db_user = await services.get_user_by_username(user.username, db)
     if db_user:
         raise fastapi.HTTPException(status_code=400, detail="Username already in use")
 

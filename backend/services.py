@@ -24,7 +24,7 @@ def get_db():
         db.close()
 
 
-async def get_user_by_email(username: str, db: Session):
+async def get_user_by_username(username: str, db: Session):
     return db.query(_models.User).filter(_models.User.username == username).first()
 
 
@@ -39,7 +39,7 @@ async def create_user(user: _schemas.UserCreate, db: Session):
 
 
 async def authenticate_user(username: str, password: str, db: Session):
-    user = await get_user_by_email(db=db, username=username)
+    user = await get_user_by_username(db=db, username=username)
 
     if not user:
         return False
