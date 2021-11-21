@@ -47,4 +47,4 @@ async def get_user(user: schemas.User = fastapi.Depends(services.get_current_use
 
 @app.get("/api")
 async def root():
-    return {"message": "Awesome Leads Manager"}
+    return {"message": "Welcome!"}
