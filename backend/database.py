@@ -3,9 +3,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:vestionarmy73@localhost:5432/tst_auth_user"
+SQLALCHEMY_DATABASE_URL = "postgresql://xpjfchbo:urdE0vW2Q8Q9iVYuX6-DGmundndpKKBc@rosie.db.elephantsql.com/xpjfchbo"
 
-#"postgresql://postgres:vestionarmy73@localhost:5432/local_db_tst_rpl" //local database
 #"postgresql://xpjfchbo:urdE0vW2Q8Q9iVYuX6-DGmundndpKKBc@rosie.db.elephantsql.com/xpjfchbo"
 
 
